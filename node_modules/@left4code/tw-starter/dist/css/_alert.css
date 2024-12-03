@@ -1,0 +1,86 @@
+@layer components {
+  .alert {
+    @apply relative border rounded-md px-5 py-4;
+    &.alert-dismissible {
+      @apply pl-5 pr-16;
+      &:not(.show) {
+        @apply hidden;
+      }
+    }
+    .btn-close {
+      @apply py-2 px-3 absolute right-0 my-auto mr-2;
+    }
+  }
+  .btn-close {
+    @apply text-slate-800;
+  }
+
+  /* Alert Colors */
+  .alert-primary {
+    @apply bg-primary border-primary text-white dark:border-primary;
+  }
+  .alert-secondary {
+    @apply bg-secondary/70 border-secondary/70 text-slate-500 dark:border-darkmode-400 dark:bg-darkmode-400 dark:text-slate-300;
+  }
+  .alert-success {
+    @apply bg-success border-success text-slate-900 dark:border-success;
+  }
+  .alert-warning {
+    @apply bg-warning border-warning text-slate-900 dark:border-warning;
+  }
+  .alert-pending {
+    @apply bg-pending border-pending text-white dark:border-pending;
+  }
+  .alert-danger {
+    @apply bg-danger border-danger text-white dark:border-danger;
+  }
+  .alert-dark {
+    @apply bg-dark border-dark text-white dark:bg-darkmode-800 dark:border-transparent dark:text-slate-300;
+  }
+
+  /* Outline Button */
+  .alert-outline-primary {
+    @apply border-primary text-primary dark:border-primary;
+  }
+  .alert-outline-secondary {
+    @apply border-secondary text-slate-500 dark:border-darkmode-100/40 dark:text-slate-300;
+  }
+  .alert-outline-success {
+    @apply border-success text-success dark:border-success;
+  }
+  .alert-outline-warning {
+    @apply border-warning text-warning dark:border-warning;
+  }
+  .alert-outline-pending {
+    @apply border-pending text-pending dark:border-pending;
+  }
+  .alert-outline-danger {
+    @apply border-danger text-danger dark:border-danger;
+  }
+  .alert-outline-dark {
+    @apply border-dark text-dark dark:border-darkmode-800 dark:text-slate-300;
+  }
+
+  /* Button Soft Colors */
+  .alert-primary-soft {
+    @apply bg-primary border-primary bg-opacity-20 border-opacity-5 text-primary dark:border-opacity-100 dark:bg-opacity-20 dark:border-primary;
+  }
+  .alert-secondary-soft {
+    @apply bg-slate-300 border-secondary bg-opacity-10 text-slate-500 dark:bg-darkmode-100/20 dark:border-darkmode-100/30 dark:text-slate-300;
+  }
+  .alert-success-soft {
+    @apply bg-success border-success bg-opacity-20 border-opacity-5 text-success dark:border-success dark:border-opacity-20;
+  }
+  .alert-warning-soft {
+    @apply bg-warning border-warning bg-opacity-20 border-opacity-5 text-warning dark:border-warning dark:border-opacity-20;
+  }
+  .alert-pending-soft {
+    @apply bg-pending border-pending bg-opacity-20 border-opacity-5 text-pending dark:border-pending dark:border-opacity-20;
+  }
+  .alert-danger-soft {
+    @apply bg-danger border-danger bg-opacity-20 border-opacity-5 text-danger dark:border-danger dark:border-opacity-20;
+  }
+  .alert-dark-soft {
+    @apply bg-dark border-dark bg-opacity-20 border-opacity-5 text-dark dark:bg-darkmode-800/30 dark:border-darkmode-800/60 dark:text-slate-300;
+  }
+}

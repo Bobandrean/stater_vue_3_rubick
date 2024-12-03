@@ -1,0 +1,39 @@
+{
+  "name": "zoom-vanilla.js",
+  "version": "2.0.6",
+  "description": "It's the best way to zoom an image",
+  "main": "dist/zoom-vanilla.min.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:spinningarrow/zoom-vanilla.js.git"
+  },
+  "keywords": [
+    "zoom",
+    "vanilla",
+    "vanilla-js",
+    "image"
+  ],
+  "author": "spinningarrow <sahil29@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/spinningarrow/zoom-vanilla.js/issues"
+  },
+  "homepage": "https://github.com/spinningarrow/zoom-vanilla.js",
+  "devDependencies": {
+    "autoprefixer": "^6.7.7",
+    "http-server": "^0.9.0",
+    "postcss-cli": "^3.0.0",
+    "uglify-js": "^2.7.3",
+    "watch": "^0.19.2"
+  },
+  "scripts": {
+    "_echo_done": "echo [`date`] \"\\033[1;32mzoom-vanilla.min.js rebuilt\\033[0m\"",
+    "compress": "uglifyjs --compress --mangle --source-map=dist/zoom-vanilla.min.js.map --source-map-url='/dist/zoom-vanilla.min.js.map' --source-map-root='/' --preamble=\"// $npm_package_name - $npm_package_version ($npm_package_homepage)\" js/zoom-vanilla.js > dist/zoom-vanilla.min.js",
+    "clean": "rm -rf dist/*",
+    "build": "npm run clean && npm run compress && npm run css",
+    "css": "postcss css/zoom.css --use autoprefixer -d dist/",
+    "start": "http-server",
+    "version": "npm run build && git add -u .",
+    "watch": "watch 'npm run compress && npm run _echo_done' js --ignoreDotFiles"
+  }
+}

@@ -1,0 +1,60 @@
+.table {
+  @apply w-full text-left;
+  thead {
+    &.table-dark {
+      @apply bg-dark text-white dark:bg-black/30;
+      tr th {
+        @apply border-b-0;
+      }
+    }
+    &.table-light {
+      @apply bg-slate-200/60 dark:bg-slate-200;
+      tr th {
+        @apply border-b-0 text-slate-700;
+      }
+    }
+  }
+  th {
+    @apply font-medium px-5 py-3 border-b-2 dark:border-darkmode-300;
+  }
+  td {
+    @apply px-5 py-3 border-b dark:border-darkmode-300;
+  }
+  &.table-dark {
+    @apply bg-dark text-white dark:bg-black/30;
+    th {
+      @apply border-slate-600 dark:border-darkmode-300;
+    }
+    td {
+      @apply border-slate-600 dark:border-darkmode-300;
+    }
+  }
+  &.table-bordered {
+    th,
+    td {
+      @apply border-l border-r border-t;
+    }
+  }
+  &.table-hover {
+    tr:hover {
+      td {
+        @apply bg-slate-100 dark:bg-darkmode-300 dark:bg-opacity-50;
+      }
+    }
+  }
+  &.table-striped {
+    tr:nth-of-type(odd) {
+      td {
+        @apply bg-slate-100 dark:bg-darkmode-300 dark:bg-opacity-50;
+      }
+    }
+  }
+  &.table-sm {
+    th {
+      @apply px-4 py-2;
+    }
+    td {
+      @apply px-4 py-2;
+    }
+  }
+}

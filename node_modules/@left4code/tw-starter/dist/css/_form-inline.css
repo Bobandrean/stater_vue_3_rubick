@@ -1,0 +1,22 @@
+@layer components {
+  .form-inline {
+    @apply flex items-center;
+    .form-label {
+      @apply mb-0 mr-5 text-right;
+    }
+    .form-control {
+      @apply flex-1;
+    }
+  }
+}
+
+.form-inline {
+  @include media-breakpoint-down(sm) {
+    @apply block;
+  }
+  .form-label {
+    @include media-breakpoint-down(sm) {
+      @apply mb-2 mr-0 text-left;
+    }
+  }
+}

@@ -1,0 +1,8 @@
+@layer components {
+  .progress {
+    @apply w-full h-2 bg-slate-200 rounded dark:bg-black/20;
+  }
+  .progress-bar {
+    @apply bg-primary h-full rounded text-xs text-white flex justify-center items-center;
+  }
+}

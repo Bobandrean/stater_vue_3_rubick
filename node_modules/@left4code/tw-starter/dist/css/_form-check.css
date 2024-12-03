@@ -1,0 +1,56 @@
+@layer components {
+  .form-check {
+    @apply flex items-center;
+  }
+  .form-check-label {
+    @apply cursor-pointer ml-2;
+  }
+  .form-check-input {
+    @apply transition-all duration-100 ease-in-out;
+    &[type="radio"] {
+      @apply shadow-sm border-slate-200 cursor-pointer focus:ring-4 focus:ring-offset-0 focus:ring-primary focus:ring-opacity-20 dark:bg-darkmode-800 dark:border-transparent dark:focus:ring-slate-700 dark:focus:ring-opacity-50;
+      &:checked {
+        @apply bg-primary border-primary border-opacity-10;
+      }
+      &:disabled:not(:checked) {
+        @apply bg-slate-100 cursor-not-allowed dark:bg-darkmode-800/50;
+      }
+      &:disabled:checked {
+        @apply opacity-70 cursor-not-allowed dark:bg-darkmode-800/50;
+      }
+    }
+    &[type="checkbox"] {
+      @apply shadow-sm border-slate-200 cursor-pointer rounded focus:ring-4 focus:ring-offset-0 focus:ring-primary focus:ring-opacity-20 dark:bg-darkmode-800 dark:border-transparent dark:focus:ring-slate-700 dark:focus:ring-opacity-50;
+      &:checked {
+        @apply bg-primary border-primary border-opacity-10;
+      }
+      &:disabled:not(:checked) {
+        @apply bg-slate-100 cursor-not-allowed dark:bg-darkmode-800/50;
+      }
+      &:disabled:checked {
+        @apply opacity-70 cursor-not-allowed dark:bg-darkmode-800/50;
+      }
+    }
+  }
+  .form-switch .form-check-input {
+    width: 38px;
+    height: 24px;
+    padding: 1px;
+    @apply rounded-full relative bg-none;
+    &:before {
+      content: "";
+      width: 20px;
+      height: 20px;
+      box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+      transition-property: margin-left;
+      @apply duration-200 ease-in-out absolute inset-y-0 my-auto rounded-full dark:bg-darkmode-600;
+    }
+    &:checked {
+      @apply bg-primary border-primary;
+      &::before {
+        margin-left: 14px;
+        @apply bg-white;
+      }
+    }
+  }
+}

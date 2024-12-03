@@ -1,0 +1,5 @@
+@layer components {
+  .form-help {
+    @apply text-xs text-slate-500 mt-2;
+  }
+}

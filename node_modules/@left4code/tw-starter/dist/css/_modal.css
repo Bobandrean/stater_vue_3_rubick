@@ -1,0 +1,114 @@
+@layer components {
+  .modal {
+    margin-top: -10000px;
+    margin-left: -10000px;
+    background: #000000a6;
+    transition: visibility 0s linear 0.2s, opacity 0.2s 0s;
+    @apply invisible opacity-0 w-screen h-screen fixed left-0 top-0;
+    &.modal-overlap {
+      background: #000000a6;
+    }
+    &.modal-static {
+      .modal-content {
+        animation: modal-static-backdrop 0.3s infinite;
+        animation-direction: alternate;
+      }
+    }
+    &.show {
+      transition: visibility 0s ease-in-out 0s, opacity 0.4s ease-in-out 0s;
+      @apply visible opacity-100;
+      > .modal-dialog {
+        @apply mt-16;
+      }
+    }
+    .modal-dialog {
+      width: 90%;
+      transition: margin-top 0.4s;
+      @apply -mt-16 mb-16 mx-auto;
+      @screen sm {
+        width: 460px;
+        &.modal-sm {
+          width: 300px;
+        }
+        &.modal-lg {
+          width: 600px;
+        }
+        &.modal-xl {
+          width: 600px;
+        }
+      }
+      @screen lg {
+        &.modal-xl {
+          width: 900px;
+        }
+      }
+      .modal-content {
+        @apply relative;
+        > [data-tw-dismiss="modal"] {
+          @apply absolute right-0 top-0 mt-3 mr-3;
+        }
+      }
+    }
+    &.modal-slide-over {
+      @apply overflow-x-hidden;
+      &.modal-static {
+        .modal-content {
+          @apply animate-none;
+        }
+      }
+      &.show {
+        transition: visibility 0s ease-in-out 0s, opacity 0.6s ease-in-out 0s;
+        @apply visible opacity-100;
+        > .modal-dialog {
+          @apply mr-0;
+        }
+      }
+      .modal-dialog {
+        margin-right: -100%;
+        transition: margin-right 0.6s;
+        @apply mt-0 mb-0;
+        .modal-content {
+          @apply rounded-none min-h-screen;
+          > [data-tw-dismiss="modal"] {
+            @apply absolute top-0 left-0 right-auto mt-4 -ml-12;
+          }
+        }
+      }
+    }
+  }
+  .modal-content {
+    @apply w-full bg-white relative rounded-md shadow-md dark:bg-darkmode-600;
+  }
+  .modal-header {
+    @apply flex items-center px-5 py-3 border-b border-slate-200/60 dark:border-darkmode-400;
+  }
+  .modal-body {
+    @apply p-5;
+  }
+  .modal-footer {
+    @apply px-5 py-3 text-right border-t border-slate-200/60 dark:border-darkmode-400;
+  }
+
+  @keyframes modal-static-backdrop {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.modal {
+  &.modal-slide-over {
+    &.show {
+      > .modal-dialog {
+        .modal-content > [data-tw-dismiss="modal"] {
+          @include media-breakpoint-down(sm) {
+            @apply -ml-10;
+          }
+        }
+      }
+    }
+  }
+}

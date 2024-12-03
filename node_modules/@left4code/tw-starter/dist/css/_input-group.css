@@ -1,0 +1,24 @@
+@layer components {
+  .input-group {
+    @apply flex;
+    .input-group-text {
+      @apply py-2 px-3 bg-slate-100 border shadow-sm border-slate-200 text-slate-600 dark:bg-darkmode-900/20 dark:border-darkmode-900/20 dark:text-slate-400;
+    }
+    > .input-group-text,
+    > .form-control {
+      @apply rounded-none;
+      &:not(:first-child) {
+        border-left-color: transparent;
+      }
+      &:first-child {
+        @apply rounded-l;
+      }
+      &:last-child {
+        @apply rounded-r;
+      }
+    }
+    > .form-control {
+      @apply z-10;
+    }
+  }
+}

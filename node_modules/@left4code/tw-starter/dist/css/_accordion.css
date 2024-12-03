@@ -1,0 +1,45 @@
+@layer components {
+  .accordion {
+    .accordion-item {
+      @apply py-4;
+      &:not(:last-child) {
+        @apply border-b border-slate-200/60 dark:border-darkmode-400;
+      }
+      &:first-child {
+        @apply -mt-4;
+      }
+      &:last-child {
+        @apply -mb-4;
+      }
+      .accordion-header .accordion-button {
+        @apply py-4 -my-4 font-medium w-full text-left dark:text-slate-400;
+        &:focus {
+          @apply outline-none;
+        }
+        &:not(.collapsed) {
+          @apply text-primary dark:text-slate-300;
+        }
+      }
+    }
+    .accordion-collapse {
+      @apply mt-3 text-slate-700 leading-relaxed dark:text-slate-400;
+      &.collapse:not(.show) {
+        @apply hidden;
+      }
+      &.collapse.show {
+        @apply visible;
+      }
+    }
+    &.accordion-boxed {
+      .accordion-item {
+        @apply p-4 border border-slate-200/60 mt-3 dark:border-darkmode-400;
+        &:first-child {
+          @apply mt-0;
+        }
+        &:last-child {
+          @apply mb-0;
+        }
+      }
+    }
+  }
+}

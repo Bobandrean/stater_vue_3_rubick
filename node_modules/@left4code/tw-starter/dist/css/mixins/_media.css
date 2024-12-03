@@ -1,0 +1,26 @@
+/* Breakpoint up */
+@mixin media-breakpoint-up($screen) {
+  @media (min-width: calc(theme("screens.#{$screen}") - 1px)) {
+    & {
+      @content;
+    }
+  }
+}
+
+/* Breakpoint down */
+@mixin media-breakpoint-down($screen) {
+  @media (max-width: calc(theme("screens.#{$screen}") - 1px)) {
+    & {
+      @content;
+    }
+  }
+}
+
+/* Breakpoint only */
+@mixin media-breakpoint-only($screen) {
+  @media (width: map-get($grid-breakpoints, $screen)) {
+    & {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,70 @@
+@layer components {
+  .nav {
+    @apply w-full flex;
+    &.nav-tabs {
+      @apply border-b border-slate-200 dark:border-darkmode-400;
+      .nav-item {
+        @apply -mb-px;
+        .nav-link {
+          @apply block border-transparent rounded-t-md;
+          &:hover:not(.disabled):not(.active) {
+            @apply hover:bg-slate-100 dark:hover:bg-darkmode-400 dark:hover:border-transparent;
+          }
+          &.active {
+            @apply bg-white border-slate-200 border-b-transparent font-medium dark:bg-transparent dark:border-t-darkmode-400 dark:border-b-darkmode-600 dark:border-x-darkmode-400;
+          }
+        }
+      }
+    }
+    &.nav-pills {
+      .nav-item {
+        .nav-link {
+          @apply rounded-md border-0;
+          &.active {
+            @apply bg-primary text-white font-medium;
+          }
+        }
+      }
+    }
+    &.nav-boxed-tabs {
+      .nav-item {
+        .nav-link {
+          box-shadow: 0px 3px 20px #0000000b;
+          @apply rounded-md;
+          &.active {
+            @apply bg-primary text-white font-medium;
+          }
+        }
+      }
+    }
+    &.nav-link-tabs {
+      .nav-item {
+        .nav-link {
+          @apply border-b-2 border-transparent;
+          &.active {
+            @apply border-b-primary font-medium;
+          }
+        }
+      }
+    }
+  }
+  .nav-link {
+    @apply block appearance-none px-5 py-2.5 border border-transparent text-slate-700 dark:text-slate-400;
+    &.active {
+      @apply text-slate-800 dark:text-white;
+    }
+  }
+  .tab-content {
+    @apply relative;
+    .tab-pane {
+      top: -9999px;
+      left: -9999px;
+      transition: visibility 0s linear 0.6s, opacity 0.6s 0s;
+      @apply absolute invisible opacity-0;
+      &.active {
+        transition: visibility 0s linear 0s, opacity 0.6s 0s;
+        @apply static visible opacity-100;
+      }
+    }
+  }
+}

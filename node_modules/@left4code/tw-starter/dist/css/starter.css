@@ -1,0 +1,35 @@
+/* Tailwind Core */
+@import "./_tailwind.css";
+
+/* Mixins */
+@import "./mixins/_media.css";
+
+/* Colors */
+@import "./_colors.css";
+
+/* Components */
+@import "./_accordion.css";
+@import "./_dropdown.css";
+@import "./_breadcrumb.css";
+@import "./_alert.css";
+@import "./_box.css";
+@import "./_btn.css";
+@import "./_file.css";
+@import "./_form-reset.css";
+@import "./_form-check.css";
+@import "./_form-control.css";
+@import "./_form-help.css";
+@import "./_form-inline.css";
+@import "./_form-label.css";
+@import "./_form-select.css";
+@import "./_image-fit.css";
+@import "./_input-group.css";
+@import "./_intro.css";
+@import "./_modal.css";
+@import "./_pagination.css";
+@import "./_progress.css";
+@import "./_scrollbar.css";
+@import "./_tab.css";
+@import "./_table.css";
+@import "./_typing-dots.css";
+@import "./_zoom-in.css";

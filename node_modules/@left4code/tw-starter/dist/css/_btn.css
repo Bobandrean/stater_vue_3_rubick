@@ -1,0 +1,232 @@
+@layer components {
+  /* Default Button */
+  .btn {
+    @apply transition duration-200 border shadow-sm inline-flex items-center justify-center py-2 px-3 rounded-md font-medium cursor-pointer focus:ring-4 focus:ring-primary focus:ring-opacity-20 dark:focus:ring-slate-700 dark:focus:ring-opacity-50 dark:transition-none;
+    &:hover:not(:disabled) {
+      @apply bg-opacity-90 border-opacity-90;
+    }
+    &:not(button) {
+      @apply text-center;
+    }
+    &:disabled {
+      @apply opacity-70 cursor-not-allowed;
+    }
+  }
+
+  /* Default Sizes */
+  .btn-sm {
+    @apply text-xs py-1.5 px-2;
+  }
+  .btn-lg {
+    @apply text-lg py-1.5 px-4;
+  }
+
+  /* Button Colors */
+  .btn-primary {
+    @apply bg-primary border-primary text-white dark:border-primary;
+  }
+  .btn-secondary {
+    @apply bg-secondary/70 border-secondary/70 text-slate-500 dark:border-darkmode-400 dark:bg-darkmode-400 dark:text-slate-300;
+    &:hover:not(:disabled) {
+      @apply bg-slate-100 border-slate-100 dark:border-darkmode-300/80 dark:bg-darkmode-300/80;
+    }
+  }
+  .btn-success {
+    @apply bg-success border-success text-slate-900 dark:border-success;
+  }
+  .btn-warning {
+    @apply bg-warning border-warning text-slate-900 dark:border-warning;
+  }
+  .btn-pending {
+    @apply bg-pending border-pending text-white dark:border-pending;
+  }
+  .btn-danger {
+    @apply bg-danger border-danger text-white dark:border-danger;
+  }
+  .btn-dark {
+    @apply bg-dark border-dark text-white dark:bg-darkmode-800 dark:border-transparent dark:text-slate-300;
+    &:hover:not(:disabled) {
+      @apply dark:bg-darkmode-800/70;
+    }
+  }
+
+  /* Button Elevated */
+  .btn-elevated {
+    @apply shadow-md;
+  }
+  .btn-elevated-primary {
+    @apply btn-elevated btn-primary;
+  }
+  .btn-elevated-secondary {
+    @apply btn-elevated btn-secondary;
+  }
+  .btn-elevated-success {
+    @apply btn-elevated btn-success;
+  }
+  .btn-elevated-warning {
+    @apply btn-elevated btn-warning;
+  }
+  .btn-elevated-pending {
+    @apply btn-elevated btn-pending;
+  }
+  .btn-elevated-danger {
+    @apply btn-elevated btn-danger;
+  }
+  .btn-elevated-dark {
+    @apply btn-elevated btn-dark;
+  }
+
+  /* Button Rounded */
+  .btn-rounded {
+    @apply rounded-full;
+  }
+  .btn-rounded-primary {
+    @apply btn-rounded btn-primary;
+  }
+  .btn-rounded-secondary {
+    @apply btn-rounded btn-secondary;
+  }
+  .btn-rounded-success {
+    @apply btn-rounded btn-success;
+  }
+  .btn-rounded-warning {
+    @apply btn-rounded btn-warning;
+  }
+  .btn-rounded-pending {
+    @apply btn-rounded btn-pending;
+  }
+  .btn-rounded-danger {
+    @apply btn-rounded btn-danger;
+  }
+  .btn-rounded-dark {
+    @apply btn-rounded btn-dark;
+  }
+
+  /* Button Elevated Rounded */
+  .btn-elevated-rounded {
+    @apply btn-elevated btn-rounded;
+  }
+  .btn-elevated-rounded-primary {
+    @apply btn-elevated-rounded btn-primary;
+  }
+  .btn-elevated-rounded-secondary {
+    @apply btn-elevated-rounded btn-secondary;
+  }
+  .btn-elevated-rounded-success {
+    @apply btn-elevated-rounded btn-success;
+  }
+  .btn-elevated-rounded-warning {
+    @apply btn-elevated-rounded btn-warning;
+  }
+  .btn-elevated-rounded-pending {
+    @apply btn-elevated-rounded btn-pending;
+  }
+  .btn-elevated-rounded-danger {
+    @apply btn-elevated-rounded btn-danger;
+  }
+  .btn-elevated-rounded-dark {
+    @apply btn-elevated-rounded btn-dark;
+  }
+
+  /* Social Media Button */
+  .btn-facebook {
+    @apply bg-[#3b5998] border-[#3b5998] text-white dark:border-[#3b5998];
+  }
+  .btn-twitter {
+    @apply bg-[#4ab3f4] border-[#4ab3f4] text-white dark:border-[#4ab3f4];
+  }
+  .btn-instagram {
+    @apply bg-[#517fa4] border-[#517fa4] text-white dark:border-[#517fa4];
+  }
+  .btn-linkedin {
+    @apply bg-[#0077b5] border-[#0077b5] text-white dark:border-[#0077b5];
+  }
+
+  /* Outline Button */
+  .btn-outline-primary {
+    @apply border-primary text-primary dark:border-primary;
+    &:hover:not(:disabled) {
+      @apply bg-primary/10;
+    }
+  }
+  .btn-outline-secondary {
+    @apply border-secondary text-slate-500 dark:border-darkmode-100/40 dark:text-slate-300;
+    &:hover:not(:disabled) {
+      @apply bg-secondary/20 dark:bg-darkmode-100/10;
+    }
+  }
+  .btn-outline-success {
+    @apply border-success text-success dark:border-success;
+    &:hover:not(:disabled) {
+      @apply bg-success/10;
+    }
+  }
+  .btn-outline-warning {
+    @apply border-warning text-warning dark:border-warning;
+    &:hover:not(:disabled) {
+      @apply bg-warning/10;
+    }
+  }
+  .btn-outline-pending {
+    @apply border-pending text-pending dark:border-pending;
+    &:hover:not(:disabled) {
+      @apply bg-pending/10;
+    }
+  }
+  .btn-outline-danger {
+    @apply border-danger text-danger dark:border-danger;
+    &:hover:not(:disabled) {
+      @apply bg-danger/10;
+    }
+  }
+  .btn-outline-dark {
+    @apply border-dark text-dark dark:border-darkmode-800 dark:text-slate-300;
+    &:hover:not(:disabled) {
+      @apply bg-darkmode-800/30 dark:bg-opacity-30;
+    }
+  }
+
+  /* Button Soft Colors */
+  .btn-primary-soft {
+    @apply bg-primary border-primary bg-opacity-20 border-opacity-5 text-primary dark:border-opacity-100 dark:bg-opacity-20 dark:border-primary;
+    &:hover:not(:disabled) {
+      @apply bg-opacity-10 border-opacity-10 dark:border-opacity-60;
+    }
+  }
+  .btn-secondary-soft {
+    @apply bg-slate-300 border-secondary bg-opacity-20 text-slate-500 dark:bg-darkmode-100/20 dark:border-darkmode-100/30 dark:text-slate-300;
+    &:hover:not(:disabled) {
+      @apply bg-opacity-10 dark:bg-darkmode-100/10 dark:border-darkmode-100/20;
+    }
+  }
+  .btn-success-soft {
+    @apply bg-success border-success bg-opacity-20 border-opacity-5 text-success dark:border-success dark:border-opacity-20;
+    &:hover:not(:disabled) {
+      @apply bg-opacity-10 border-opacity-10;
+    }
+  }
+  .btn-warning-soft {
+    @apply bg-warning border-warning bg-opacity-20 border-opacity-5 text-warning dark:border-warning dark:border-opacity-20;
+    &:hover:not(:disabled) {
+      @apply bg-opacity-10 border-opacity-10;
+    }
+  }
+  .btn-pending-soft {
+    @apply bg-pending border-pending bg-opacity-20 border-opacity-5 text-pending dark:border-pending dark:border-opacity-20;
+    &:hover:not(:disabled) {
+      @apply bg-opacity-10 border-opacity-10;
+    }
+  }
+  .btn-danger-soft {
+    @apply bg-danger border-danger bg-opacity-20 border-opacity-5 text-danger dark:border-danger dark:border-opacity-20;
+    &:hover:not(:disabled) {
+      @apply bg-opacity-10 border-opacity-10;
+    }
+  }
+  .btn-dark-soft {
+    @apply bg-dark border-dark bg-opacity-20 border-opacity-5 text-dark dark:bg-darkmode-800/30 dark:border-darkmode-800/60 dark:text-slate-300;
+    &:hover:not(:disabled) {
+      @apply bg-opacity-10 border-opacity-10 dark:bg-darkmode-800/50 dark:border-darkmode-800;
+    }
+  }
+}
